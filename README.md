@@ -38,7 +38,7 @@ cd banglore_houseprice_prediction
 python -m venv venv
 
 # Activate (Windows)
-venv\Scripts\activate ![Screenshot 2025-04-12 120825](https://github.com/user-attachments/assets/20bfeaee-8c33-491b-9e71-107fa0a37dbc)
+venv\Scripts\activate 
 
 
 # Activate (macOS/Linux)

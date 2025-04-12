@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bangalore Home Price Predictor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS & JS via Flask's static folder -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+  <!-- Favicon (optional) -->
+  <!-- <img src="{{ url_for('static', filename='house.png') }}"> -->
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='house.png') }}">
+
+</head>
+
+<body>
+  <div class="main-container">
+    <!-- Input panel -->
+    <div class="input-panel">
+      <div class="glass-card">
+        <h1>🏠 Bangalore Home Price Predictor</h1>
+
+        <label for="uiSqft">📐 How much area do you want (in square feet)?</label>
+        <input type="text" id="uiSqft" placeholder="e.g. 1200" />
+
+        <label>🛏️ How many BHKs are you looking for?</label>
+        <div class="switch-group switch-field" id="bhk-options">
+          <input type="radio" id="bhk1" name="uiBHK" value="1" />
+          <label for="bhk1">1</label>
+          <input type="radio" id="bhk2" name="uiBHK" value="2" />
+          <label for="bhk2">2</label>
+          <input type="radio" id="bhk3" name="uiBHK" value="3" />
+          <label for="bhk3">3</label>
+          <input type="radio" id="bhk4" name="uiBHK" value="4" />
+          <label for="bhk4">4</label>
+          <input type="radio" id="bhk5" name="uiBHK" value="5" />
+          <label for="bhk5">5</label>
+        </div>
+
+        <label>🚿 How many bathrooms do you need?</label>
+        <div class="switch-group switch-field" id="bath-options">
+          <input type="radio" id="bath1" name="uiBathrooms" value="1" />
+          <label for="bath1">1</label>
+          <input type="radio" id="bath2" name="uiBathrooms" value="2" />
+          <label for="bath2">2</label>
+          <input type="radio" id="bath3" name="uiBathrooms" value="3" />
+          <label for="bath3">3</label>
+          <input type="radio" id="bath4" name="uiBathrooms" value="4" />
+          <label for="bath4">4</label>
+          <input type="radio" id="bath5" name="uiBathrooms" value="5" />
+          <label for="bath5">5</label>
+        </div>
+
+        <label for="uiLocations">📍 Where do you need a house in Bangalore?</label>
+        <div class="location-row">
+          <select id="uiLocations">
+            <option value="" disabled selected>Select Location</option>
+          </select>
+          <button type="button" class="map-btn" onclick="onViewMapClicked()">📍 View Map</button>
+        </div>
+
+        <button class="submit-btn" onclick="onClickedEstimatePrice()">Estimate Price</button>
+        <div id="uiEstimatedPrice" class="result-box"></div>
+      </div>
+    </div>
+
+    <!-- Map panel -->
+    <div class="map-panel">
+      <div id="osmMap" class="map-container"></div>
+    </div>
+  </div>
+</body>
+<footer class="footer">
+  Developed by - Niranjan Hegde
+</footer>
+</html>

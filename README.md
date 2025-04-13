@@ -30,7 +30,7 @@ A machine learning-powered web application built with **Flask** that predicts ho
 
 ## 🧭 How to Run This Project on Your Machine
 
-### 1. Clone the Repository
+###  Clone the Repository
 ```bash
 https://github.com/niranjanhegde-droid/banglore_houseprice_prediction
 cd banglore_houseprice_prediction

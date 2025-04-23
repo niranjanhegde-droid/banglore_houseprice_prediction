@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: bangalore-house-price-predictor
+    env: python
+    buildCommand: pip install -r server/requirements.txt
+    startCommand: gunicorn server.app:app

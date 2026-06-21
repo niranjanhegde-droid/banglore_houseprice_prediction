@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 import util
 
+<<<<<<< HEAD
 app = Flask(
     __name__,
     template_folder='../templates',
@@ -12,6 +13,9 @@ print("Loading artifacts...")
 util.load_saved_artifacts()
 print("Artifacts loaded successfully!")
 
+=======
+app = Flask(__name__, static_folder="static", template_folder="templates")
+>>>>>>> ef2e98e402a823d2e0bdc56df7882900915f13de
 
 @app.route('/')
 def index():

@@ -33,7 +33,11 @@ def load_saved_artifacts():
 
 
     #  Absolute path to the artifacts folder (relative to this file)
-    artifact_path = os.path.join(os.path.dirname(__file__), "..", "artifacts")
+    BASE_DIR = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..")
+    )
+
+    artifact_path = os.path.join(BASE_DIR, "artifacts")
 
     print("Looking for:", os.path.join(artifact_path, "columns.json"))
 

@@ -1,11 +1,12 @@
 from flask import Flask, request, jsonify, render_template
 from server import util
+
+
 app = Flask(
     __name__,
-    template_folder='../templates',
-    static_folder='../static'
+    template_folder="templates",
+    static_folder="static"
 )
-
 # Load model and columns when application starts
 print("Loading artifacts...")
 util.load_saved_artifacts()

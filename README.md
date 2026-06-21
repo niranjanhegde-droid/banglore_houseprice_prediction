@@ -3,7 +3,8 @@
 A machine learning-powered web application built with **Flask** that predicts home prices in Bengaluru based on user input features such as area, location, number of bedrooms and bathrooms, etc. The app also integrates **OpenStreetMap** to allow users to visualize the location of the selected area.
 
 ---
-
+## view live
+https://banglore-houseprice-prediction-qm5i.onrender.com/
 ## 🛠️ Technologies Used
 
 - 🔮 **Python** – Backend & ML Model
